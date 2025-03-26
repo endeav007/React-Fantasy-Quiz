@@ -2,53 +2,55 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import {questions} from './questions'
 
 
 
 function PersonalityQuizTable(){
 
+  let index = 0
   return (
     <div class = "quiz-background">
-      <QuestionNumber />
-      <Question />
-      <AnswerGroup />
+      <QuestionNumber number = {questions[index].id}/>
+      <Question question = {questions[index].question}/>
+      <AnswerGroup answerArray = {questions[index].answers}/>
     </div>
     
   )
 
 }
 
-function QuestionNumber(){
+function QuestionNumber({number}){
   return (
-    <h3>Question Number x</h3>
+    <h3>Question Number {number} </h3>
   );
 }
 
-function Question(){
+function Question({question}){
   return (
-    <h1> The text for our question</h1>
+    <h1> {question}</h1>
 
   );
 }
 
-function AnswerGroup(){
+function AnswerGroup({answerArray}){
 
   return (
     <>
     <div class = "answer-row">
-      <Answer text="Question 1"/>
+      <Answer text={answerArray[0].answer}/>
     </div>
 
     <div class = "answer-row">
-      <Answer text="Question 2"/>
+    <Answer text={answerArray[1].answer}/>
     </div>
 
     <div class = "answer-row">
-      <Answer text="Question 3"/>
+    <Answer text={answerArray[2].answer}/>
     </div>
 
     <div class = "answer-row">
-      <Answer text="Question 4"/>
+    <Answer text={answerArray[3].answer}/>
     </div>
 
     </>
@@ -64,5 +66,6 @@ function Answer({text}){
 }
 
 export default function App(){
+  
   return <PersonalityQuizTable/>
 }
