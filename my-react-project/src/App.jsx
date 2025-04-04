@@ -8,13 +8,20 @@ import {questions} from './questions'
 
 function PersonalityQuizTable(){
 
-  let index = 0
   return (
+    
+    <>
+
     <div class = "quiz-background">
       <QuestionNumber number = {questions[index].id}/>
       <Question question = {questions[index].question}/>
       <AnswerGroup answerArray = {questions[index].answers}/>
     </div>
+    
+    
+    
+    </>
+    
     
   )
 
@@ -33,24 +40,30 @@ function Question({question}){
   );
 }
 
-function AnswerGroup({answerArray}){
+function AnswerGroup({answerArray, index}){
+
+  function handleClick(){
+    
+    index+=1
+      
+  }
 
   return (
     <>
     <div class = "answer-row">
-      <Answer text={answerArray[0].answer}/>
+      <Answer text={answerArray[0].answer} onAnswerClick = {() =>handleClick()}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[1].answer}/>
+    <Answer text={answerArray[1].answer} onAnswerClick = {() =>handleClick()}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[2].answer}/>
+    <Answer text={answerArray[2].answer} onAnswerClick = {() =>handleClick()}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[3].answer}/>
+    <Answer text={answerArray[3].answer} onAnswerClick = {() =>handleClick()}/>
     </div>
 
     </>
@@ -58,14 +71,16 @@ function AnswerGroup({answerArray}){
   )
 }
 
-function Answer({text}){
+function Answer({text, onAnswerClick}){
   return(
-    <button className = "answer-button"> {text} </button>
+    <button className = "answer-button" onClick = {onAnswerClick}> 
+    {text} 
+    </button>
   );
 
 }
 
 export default function App(){
   
-  return <PersonalityQuizTable/>
+  return <PersonalityQuizTable index = {0}/>
 }
