@@ -69,11 +69,11 @@ function AnswerGroup({answerArray}){
 
 function Answer({text}){
 
-  
+  const [questionNumber, setQuestionNumber] = useState(0);
 
   function handleClick()
   {
-    curr_index++;
+    setQuestionNumber(questionNumber+1);
     console.log("Clicked!")
   }
 
@@ -93,12 +93,8 @@ function NextQuestion(index)
 
 export default function App(){
 
-  const 
-
-  
     
   return <PersonalityQuizTable i = {1}/>
-
 
   
 }
