@@ -6,16 +6,16 @@ import {questions} from './questions'
 
 
 
-function PersonalityQuizTable(){
+function PersonalityQuizTable({i}){
 
   return (
     
     <>
 
     <div class = "quiz-background">
-      <QuestionNumber number = {questions[index].id}/>
-      <Question question = {questions[index].question}/>
-      <AnswerGroup answerArray = {questions[index].answers}/>
+      <QuestionNumber number = {questions[i].id}/>
+      <Question question = {questions[i].question}/>
+      <AnswerGroup answerArray = {questions[i].answers} index = {i}/>
     </div>
     
     
@@ -40,30 +40,26 @@ function Question({question}){
   );
 }
 
-function AnswerGroup({answerArray, index}){
+function AnswerGroup({answerArray}){
 
-  function handleClick(){
-    
-    index+=1
-      
-  }
+
 
   return (
     <>
     <div class = "answer-row">
-      <Answer text={answerArray[0].answer} onAnswerClick = {() =>handleClick()}/>
+      <Answer text={answerArray[0].answer}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[1].answer} onAnswerClick = {() =>handleClick()}/>
+    <Answer text={answerArray[1].answer} />
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[2].answer} onAnswerClick = {() =>handleClick()}/>
+    <Answer text={answerArray[2].answer} />
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[3].answer} onAnswerClick = {() =>handleClick()}/>
+    <Answer text={answerArray[3].answer} />
     </div>
 
     </>
@@ -71,16 +67,38 @@ function AnswerGroup({answerArray, index}){
   )
 }
 
-function Answer({text, onAnswerClick}){
+function Answer({text}){
+
+  
+
+  function handleClick()
+  {
+    curr_index++;
+    console.log("Clicked!")
+  }
+
+  
   return(
-    <button className = "answer-button" onClick = {onAnswerClick}> 
+    <button className = "answer-button" onClick = {handleClick}> 
     {text} 
     </button>
   );
 
 }
 
+function NextQuestion(index)
+{
+  return index++;
+}
+
 export default function App(){
+
+  const 
+
   
-  return <PersonalityQuizTable index = {0}/>
+    
+  return <PersonalityQuizTable i = {1}/>
+
+
+  
 }
