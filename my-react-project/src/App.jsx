@@ -6,19 +6,26 @@ import {questions} from './questions'
 
 
 
-function PersonalityQuizTable({i}){
+function PersonalityQuizTable(){
+
+  const [questionNumber, setQuestionNumber] = useState(0);
+
+  function handleClick()
+  {
+    setQuestionNumber(a => a + 1);
+    console.log("Clicked!")
+  }
+  
 
   return (
     
     <>
-
+    
     <div class = "quiz-background">
-      <QuestionNumber number = {questions[i].id}/>
-      <Question question = {questions[i].question}/>
-      <AnswerGroup answerArray = {questions[i].answers} question1 = {i}/>
+      <QuestionNumber number = {questions[questionNumber].id}/>
+      <Question question = {questions[questionNumber].question}/>
+      <AnswerGroup answerArray = {questions[questionNumber].answers} handleClick = {handleClick}/>
     </div>
-    
-    
     
     </>
     
@@ -40,29 +47,29 @@ function Question({question}){
   );
 }
 
-function AnswerGroup({answerArray, question1}){
+function AnswerGroup({answerArray, handleClick}){
 
+  
 
 
   return (
     <>
     <div class = "answer-row">
-      <Answer text={answerArray[0].answer} question = {question1}/>
+      <Answer text={answerArray[0].answer} handleClick = {handleClick}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[1].answer} question = {question1}/>
+    <Answer text={answerArray[1].answer} handleClick = {handleClick} />
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[2].answer} question = {question1}/>
+    <Answer text={answerArray[2].answer} handleClick = {handleClick}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[3].answer} question = {question1}/>
+    <Answer text={answerArray[3].answer} handleClick = {handleClick}/>
     </div>
 
-    
 
     </>
     
@@ -70,16 +77,9 @@ function AnswerGroup({answerArray, question1}){
   )
 }
 
-function Answer({text, question}){
+function Answer({text, question, handleClick}){
 
-  const [questionNumber, setQuestionNumber] = useState(0);
-
-  function handleClick()
-  {
-    setQuestionNumber(a => a + 1);
-    question = questionNumber;
-    console.log("Clicked!")
-  }
+  
 
   
   return(
@@ -103,7 +103,7 @@ function Answer({text, question}){
 export default function App(){
 
     
-  return <PersonalityQuizTable i = {0}/>
+  return <PersonalityQuizTable/>
 
   
 }
