@@ -2,7 +2,7 @@ export const questions = [
 {
 
 id: 0,
-question: 'Who are you?',
+question: 'Who are you and what color is the sky and can you tell me your name?',
 answers: 
 [
     {personalityType: "A", answer: "Who are you?"},

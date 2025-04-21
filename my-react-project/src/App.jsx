@@ -49,9 +49,6 @@ function Question({question}){
 
 function AnswerGroup({answerArray, handleClick}){
 
-  
-
-
   return (
     <>
     <div class = "answer-row">
@@ -79,9 +76,6 @@ function AnswerGroup({answerArray, handleClick}){
 
 function Answer({text, question, handleClick}){
 
-  
-
-  
   return(
 
     <>
@@ -93,7 +87,6 @@ function Answer({text, question, handleClick}){
     
     
     </>
-    
     
   );
 
