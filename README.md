@@ -27,3 +27,6 @@ that will be constantly updated with each click.
   - [x] Make buttons control the index
   - [ ]  Add an array to hold remember the chosen values
 - [ ]  Develop the story and personality aspects
+- [ ]  Create a starting screen
+- [ ]  Create and ending screen
+
