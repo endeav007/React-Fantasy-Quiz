@@ -15,9 +15,10 @@ that will be constantly updated with each click.
 
 
 ## Installation + Running
-
+[WIP]
 
 ## Usage + Purpose
+This is a personality quiz for the purpose of entertainment. 
 
 # Development Roadmap
 - [x] Create a static design of the GUI
@@ -25,8 +26,13 @@ that will be constantly updated with each click.
 - [ ] Develop the interactive portions
   - [x] Create an object array to hold the questions
   - [x] Make buttons control the index
-  - [ ]  Add an array to hold remember the chosen values
+  - [X] Add an array to hold remember the chosen values
+  - [ ] Adjust code to pull personality ID from file instead of being static choices
+  - [ ] Add funcinality to calculate the player's results
 - [ ]  Develop the story and personality aspects
-- [ ]  Create a starting screen
-- [ ]  Create and ending screen
+- [ ]  Create an starting screen
+- [ ]  Create an ending/result screen
+
+## Future Goals
+Create a program to auto sort questions into the correct file structure, so I can reuse this program for other quizzes. 
 
