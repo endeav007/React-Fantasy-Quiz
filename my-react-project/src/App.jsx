@@ -9,12 +9,15 @@ import {questions} from './questions'
 function PersonalityQuizTable(){
 
   const [questionNumber, setQuestionNumber] = useState(0);
+  
 
   function handleClick()
   {
     setQuestionNumber(a => a + 1);
     console.log("Clicked!")
   }
+
+  
   
 
   return (
@@ -49,48 +52,52 @@ function Question({question}){
 
 function AnswerGroup({answerArray, handleClick}){
 
-  
+  const [history, setHistory] = useState([]);
+
+  function updateHistory(id)
+  {
+    
+    const historyList = [...history, {id}];
+    setHistory(historyList);
+    console.log(history);
+    console.log("History worked");
+  }
 
 
-  return (
+  return(
     <>
     <div class = "answer-row">
-      <Answer text={answerArray[0].answer} handleClick = {handleClick}/>
+      <Answer text={answerArray[0].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {'A'}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[1].answer} handleClick = {handleClick} />
+    <Answer text={answerArray[1].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {'B'}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[2].answer} handleClick = {handleClick}/>
+    <Answer text={answerArray[2].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {'C'}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[3].answer} handleClick = {handleClick}/>
+    <Answer text={answerArray[3].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {'D'}/>
     </div>
-
 
     </>
-    
-    
+        
   )
 }
 
-function Answer({text, question, handleClick}){
-
-  
+function Answer({text, question, handleClick, updateHistory, id}){
 
   
   return(
 
     <>
     <button className = "answer-button" onClick ={() => 
-    {handleClick();} } > 
+    {handleClick();updateHistory(id);} } > 
     {text} 
     </button>
     {question}
-    
     
     </>
     
