@@ -1,22 +1,27 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
 import {questions} from './questions'
-import { useEffect } from 'react';
 
 
 
 function PersonalityQuizTable(){
 
   const [questionNumber, setQuestionNumber] = useState(0);
+ 
+
   
 
   function handleClick()
   {
     setQuestionNumber(a => a + 1);
-    console.log("Clicked!!")
+    console.log("Clicked!")
   }
+
   
+  
+
   return (
     
     <>
@@ -50,8 +55,6 @@ function Question({question}){
 function AnswerGroup({answerArray, handleClick}){
 
   const [history, setHistory] = useState([]);
-  const navigate = useNavigate();
-
 
   function updateHistory(id)
   {
@@ -63,43 +66,26 @@ function AnswerGroup({answerArray, handleClick}){
   }
 
 
-  useEffect(() => {
-    
-    if(history.length > 3){
-      
-      navigate(
-        '/Result', 
-        {
-          state:{
-            history
-          }
-        }
-      );
-    }
-  },[history])
-    
-
-
   return(
     <>
     <div class = "answer-row">
-      <Answer text={answerArray[0].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {'A'}/>
+      <Answer text={answerArray[0].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {answerArray[0].personalityType}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[1].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {'B'}/>
+    <Answer text={answerArray[1].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {answerArray[1].personalityType}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[2].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {'C'}/>
+    <Answer text={answerArray[2].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {answerArray[2].personalityType}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[3].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {'D'}/>
+    <Answer text={answerArray[3].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {answerArray[3].personalityType}/>
     </div>
 
     <div class = "answer-row">
-    <Answer text={answerArray[4].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {'E'}/>
+    <Answer text={answerArray[4].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {answerArray[4].personalityType}/>
     </div>
 
     </>

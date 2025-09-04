@@ -1,0 +1,40 @@
+#root {
+  font-family: serif;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color:#fcf3e4;
+}
+
+h3{color: #896c00; }
+
+h1{color: #302400; }
+
+.answer-button{
+  background: #654f00;
+  border-radius: 10px;
+  font-size: 15pt;
+  text-align: center;
+  margin: .5em;
+  width: 20rem; 
+}
+
+.answer-button:hover{
+  
+  background: #fcf3e4; 
+  color: #654f00;
+
+}
+
+.answer-row:after{
+  clear: both;
+  
+}
+
+.quiz-background{
+  background: #fcf3e4;
+  padding: 2em;
+}
+
+
