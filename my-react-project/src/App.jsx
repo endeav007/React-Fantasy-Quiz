@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css'
 import {questions} from './questions'
+import { useEffect } from 'react';
 
 
 
@@ -14,12 +14,9 @@ function PersonalityQuizTable(){
   function handleClick()
   {
     setQuestionNumber(a => a + 1);
-    console.log("Clicked!")
+    console.log("Clicked!!")
   }
-
   
-  
-
   return (
     
     <>
@@ -53,6 +50,8 @@ function Question({question}){
 function AnswerGroup({answerArray, handleClick}){
 
   const [history, setHistory] = useState([]);
+  const navigate = useNavigate();
+
 
   function updateHistory(id)
   {
@@ -62,6 +61,23 @@ function AnswerGroup({answerArray, handleClick}){
     console.log(history);
     console.log("History worked");
   }
+
+
+  useEffect(() => {
+    
+    if(history.length > 3){
+      
+      navigate(
+        '/Result', 
+        {
+          state:{
+            history
+          }
+        }
+      );
+    }
+  },[history])
+    
 
 
   return(
@@ -80,6 +96,10 @@ function AnswerGroup({answerArray, handleClick}){
 
     <div class = "answer-row">
     <Answer text={answerArray[3].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {'D'}/>
+    </div>
+
+    <div class = "answer-row">
+    <Answer text={answerArray[4].answer} handleClick = {handleClick} updateHistory = {updateHistory} id = {'E'}/>
     </div>
 
     </>
