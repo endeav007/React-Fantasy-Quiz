@@ -67,8 +67,8 @@ export default function MouseLight(){
 
         // Mouse move handler
         function onMouseMove(event) {
-        mouse.x = event.clientX - width / 2;
-        mouse.y = height / 2 - event.clientY; // invert y for three.js coords
+            mouse.x = event.clientX - width / 2;
+            mouse.y = height / 2 - event.clientY; // invert y for three.js coords
         }
         window.addEventListener('mousemove', onMouseMove);
 
@@ -84,7 +84,7 @@ export default function MouseLight(){
         }
         animate();
 
-
+        /*
         function onResize() {
             const w = window.innerWidth;
             const h = window.innerHeight;
@@ -93,7 +93,6 @@ export default function MouseLight(){
             camera.top = h / 2;
             camera.bottom = h / -2;
             camera.updateProjectionMatrix();
-
             renderer.setSize(w, h);
         }
     window.addEventListener('resize', onResize);
@@ -107,11 +106,12 @@ export default function MouseLight(){
         containerRef.current.removeChild(renderer.domElement);
       }
     };
+    */
 
 
     }, []);
 
-      return <div ref={containerRef} style={{ position: 'fixed', top: 0, left: 0, pointerEvents: 'none', width: '100vw', height: '100vh', zIndex: 9999 }} />;
+    return <div ref={containerRef} style={{ position: 'fixed', top: 0, left: 0, pointerEvents: 'none', width: '100vw', height: '100vh', zIndex: 9999 }} />;
 
 
 }

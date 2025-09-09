@@ -106,7 +106,6 @@ function AnswerGroup({answerArray, handleClick}){
 }
 
 function Answer({text, question, handleClick, updateHistory, id}){
-
   
   return(
 
