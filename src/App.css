@@ -8,39 +8,20 @@
 }
 
 body{
-  background-image: url(./assets/stephen-pedersen-0J76FMwjyhM-unsplash.jpg);
+  background-image: url(./assets/stephen-pedersen-0J76FMwjyhM-unsplash-1.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
-.pagewrapper{
-  position: relative;
-}
-
-.glowable {
-  font-size: 2rem;
-  transition: color 0.3s, text-shadow 0.3s;
-}
-
-[glow] .glowable {
-  color: var(--glow-color);
-  text-shadow: 0 0 12px var(--glow-color), 0 0 24px var(--glow-color);
-}
-
-.page-glow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-}
 
 
 
 h3{color: #896c00; }
 
-h1{color: #302400; }
+h1{
+  color: #302400; 
+  text-wrap: wrap;
+}
 
 .answer-button{
   background: #654f00;
@@ -48,7 +29,7 @@ h1{color: #302400; }
   font-size: 15pt;
   text-align: center;
   margin: .5em;
-  width: 20rem; 
+  width: 80vh; 
 }
 
 .answer-button:hover{
@@ -65,17 +46,11 @@ h1{color: #302400; }
 
 .quiz-background{
   
-  padding: 2em;
+  padding: 2vw;
+  background-color: rgb(156, 156, 156);
+  width: 100vh;
 
 }
 
-
-.glowable-text {
-  color: black;
-}
-
-[glow] .quiz-background {
-  color: var(--glow-color);
-}
 
 

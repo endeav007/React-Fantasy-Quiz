@@ -4,20 +4,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css'
 import App from './App.jsx'
 import Result from './result.jsx'
+import MouseLight from './three.jsx'
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <MouseLight /> 
+    <Router>
+      <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/Result" element={<Result />} />
+      </Routes>
+    </Router>
     
-    
-          <Router>
-            <Routes>
-                <Route path="/" element={<App />} />
-                <Route path="/Result" element={<Result />} />
-            </Routes>
-          </Router>
-     
-    
-  </StrictMode>,
+  </StrictMode>
 )
