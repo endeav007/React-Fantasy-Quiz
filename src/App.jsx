@@ -19,14 +19,12 @@ function PersonalityQuizTable(){
   
   return (
     
-    <>
-    
-    <div class = "quiz-background">
-      <QuestionNumber number = {questions[questionNumber].id}/>
-      <Question question = {questions[questionNumber].question}/>
-      <AnswerGroup answerArray = {questions[questionNumber].answers} handleClick = {handleClick}/>
-    </div>
-    
+    <>  
+      <div class = "quiz-background">
+        <QuestionNumber number = {questions[questionNumber].id}/>
+        <Question question = {questions[questionNumber].question}/>
+        <AnswerGroup answerArray = {questions[questionNumber].answers} handleClick = {handleClick}/>
+      </div>
     </>
     
     

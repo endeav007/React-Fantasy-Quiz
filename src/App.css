@@ -7,6 +7,37 @@
   color:#fcf3e4;
 }
 
+body{
+  background-image: url(./assets/stephen-pedersen-0J76FMwjyhM-unsplash.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.pagewrapper{
+  position: relative;
+}
+
+.glowable {
+  font-size: 2rem;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+[glow] .glowable {
+  color: var(--glow-color);
+  text-shadow: 0 0 12px var(--glow-color), 0 0 24px var(--glow-color);
+}
+
+.page-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+
+
 h3{color: #896c00; }
 
 h1{color: #302400; }
@@ -33,8 +64,18 @@ h1{color: #302400; }
 }
 
 .quiz-background{
-  background: #fcf3e4;
+  
   padding: 2em;
+
+}
+
+
+.glowable-text {
+  color: black;
+}
+
+[glow] .quiz-background {
+  color: var(--glow-color);
 }
 
 
