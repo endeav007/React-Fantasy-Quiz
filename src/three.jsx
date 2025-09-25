@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
+
+
 export default function MouseLight(){
 
     const containerRef = useRef();
@@ -32,6 +34,9 @@ export default function MouseLight(){
         canvas.height = size;
         const ctx = canvas.getContext('2d');
 
+
+        
+    
         const gradient = ctx.createRadialGradient(
             size / 2,
             size / 2,
@@ -40,8 +45,10 @@ export default function MouseLight(){
             size / 2,
             size / 2
         );
+    
 
-        gradient.addColorStop(0, 'rgba(255, 253, 134, 0.8)');
+        
+        gradient.addColorStop(0, 'rgba(221, 218, 38, 0.74)');
         gradient.addColorStop(1, 'rgba(249, 215, 20, 0)');
 
         ctx.fillStyle = gradient;
@@ -51,11 +58,19 @@ export default function MouseLight(){
 
 
         const geometry = new THREE.PlaneGeometry(300, 300);
-            const material = new THREE.MeshBasicMaterial({
+
+        const material = new THREE.MeshBasicMaterial({
             map: texture,
             transparent: true,
             depthWrite: false,
+            blending: THREE.CustomBlending,
+            blendEquation: THREE.SubtractEquation,
+            blendSrc: THREE.SrcAlphaSaturateFactor,
+            blendDst: THREE.DstColorFactor,
+            
         });
+
+        
 
 
         const glowPlane = new THREE.Mesh(geometry, material);

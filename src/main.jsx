@@ -10,9 +10,8 @@ import MouseLight from './three.jsx'
 
 createRoot(document.getElementById('root')).render(
 
-  
   <StrictMode>
-     <MouseLight />
+    
     <Router>
       <Routes>
           <Route path="/" element={<App />} />

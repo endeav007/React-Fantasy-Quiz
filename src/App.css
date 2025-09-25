@@ -4,27 +4,30 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  color:#fcf3e4;
+  --text: #302400;
+  --buttonBG: #654f00;
+  --buttonText: #fcf3e4;
+  --headingColor: #E7A727;
+  --borderColor: #1a1402;
+  font-size: 16px;
 }
 
 body{
-  background-image: url(./assets/stephen-pedersen-0J76FMwjyhM-unsplash-1.jpg);
+  background-image: url(./assets/linus-sandvide-cropped.png);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 
 
-
-h3{color: #896c00; }
-
 h1{
-  color: #302400; 
+  color: var(--text); 
   text-wrap: wrap;
 }
 
 .answer-button{
-  background: #654f00;
+  color: var(--buttonText);
+  background: var(--buttonBG);
   border-radius: 10px;
   font-size: 15pt;
   text-align: center;
@@ -34,8 +37,9 @@ h1{
 
 .answer-button:hover{
   
-  background: #fcf3e4; 
-  color: #654f00;
+  background: var(--buttonText); 
+  color: var(--buttonBG);
+  border: solid 2px var(--borderColor);
 
 }
 
@@ -47,10 +51,44 @@ h1{
 .quiz-background{
   
   padding: 2vw;
-  background-color: rgb(156, 156, 156);
-  width: 100vh;
-
+  background-color: var(--buttonText);
+  width: 55rem;
+  height: 40rem;
+  background-image: url(./assets/FrameFantasyQuiz_Crop.png);
+  background-size: 59rem 44rem;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+
+.question-num{
+  color:  var(--headingColor);
+  border: solid 4px var(--borderColor);
+  background-color: var(--text);
+  width: 30%;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 5rem;
+}
+
+hr {
+  width: 80%;
+  border: solid 2px var(--borderColor);
+}
+.question{
+  color: var(--text);
+  font-size: 2rem;
+  width: 90%;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+.answer-group{
+  padding: 1rem 0;
+}
+
+.answer-button{
+  border: solid 2px var(--borderColor);
+}
 
 
