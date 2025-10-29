@@ -95,13 +95,16 @@ hr {
   padding: 1.5rem;
   margin: 1rem;
   color: var(--text);
-  overflow: scroll;
+ 
 }
 
-.result-section p{
+.result-section .desc{
   padding: 1.5rem;
   color: var(--text);
   font-size: 15pt;
+  overflow: scroll;
+  height: 15rem;
+  margin: 2rem;
 }
 
 

@@ -66,8 +66,15 @@ function Description({index}){
             <div className = "title">
                 <h3>You are... </h3>
                 <h1> {results[index].result}</h1>
-            </div>         
-            <p className="desc"> {results[index].description} </p>     
+            </div>   
+            <div className="desc">    
+            <p > {results[index].description} </p> 
+            <p > {results[index].paragraph1} </p>
+            <p > {results[index].paragraph2} </p>    
+            <p > {results[index].paragraph3} </p>
+            <p > {results[index].paragraph4} </p> 
+            <p > {results[index].paragraph5} </p>   
+            </div>  
         </div>
     
     );

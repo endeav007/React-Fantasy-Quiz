@@ -113,15 +113,15 @@ answers:
 
 {
     id:7,
-    question: 'This is the last time you’ll fight alongside these people. When did you meet them? ',
+    question: 'This is the last time you’ll fight alongside these people.',
 
     answers:
     [
-        {personalityType: "Fighter", answer: "When I needed something to fight for."},
-        {personalityType: "Healer", answer: "When I was looking for help."},
-        {personalityType: "Dreamer", answer: "When I was at my lowest. "},
-        {personalityType: "Archer", answer: "When I decided to be better."},
-        {personalityType: "Storyteller", answer: "When I was searching for something new. "}
+        {personalityType: "Fighter", answer: "I know it is."},
+        {personalityType: "Healer", answer: "I hope it isn't."},
+        {personalityType: "Dreamer", answer: "It won't be"},
+        {personalityType: "Archer", answer: "It can't be."},
+        {personalityType: "Storyteller", answer: "It shouldn’t have been."}
     ]
     
 }, 
