@@ -72,9 +72,9 @@ answers:
 
     answers:
     [
-        {personalityType: "Fighter", answer: "My own."},
+        {personalityType: "Fighter", answer: "Yes. Who else could’ve gotten this close?"},
         {personalityType: "Healer", answer: "There must've been another way. "},
-        {personalityType: "Dreamer", answer: "Whoever placed us on this path."},
+        {personalityType: "Dreamer", answer: "I thought it was, up until now. "},
         {personalityType: "Archer", answer: "I was fully against it from the beginning."},
         {personalityType: "Storyteller", answer: "It was, though I wish it wasn't."}
     ]
