@@ -57,8 +57,8 @@ function AnswerGroup({answerArray, handleClick}){
     
     const historyList = [...history, {id}];
     setHistory(historyList);
-    console.log(history);
-    console.log("History worked");
+    //console.log(history);
+    //console.log("History worked");
   }
 
 

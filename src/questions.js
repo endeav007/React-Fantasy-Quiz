@@ -26,7 +26,7 @@ answers:
         {personalityType: "Healer", answer: "When there's nothing I can do to help."},
         {personalityType: "Dreamer", answer: "When I run out of ideas."},
         {personalityType: "Archer", answer: "When I fall."},
-        {personalityType: "SToryteller", answer: "When my strongest attack isn't enough."}
+        {personalityType: "Storyteller", answer: "When my strongest attack isn't enough."}
     ]
     
     

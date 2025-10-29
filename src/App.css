@@ -91,4 +91,17 @@ hr {
   border: solid 2px var(--borderColor);
 }
 
+.result-section .title{
+  padding: 1.5rem;
+  margin: 1rem;
+  color: var(--text);
+  overflow: scroll;
+}
+
+.result-section p{
+  padding: 1.5rem;
+  color: var(--text);
+  font-size: 15pt;
+}
+
 
