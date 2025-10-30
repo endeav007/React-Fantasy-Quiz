@@ -1,12 +1,30 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# A Losing Battle - A Fantasy Character Personality Quiz
+Created with React + Vite,  by Autumn Austin
 
-Currently, two official plugins are available:
+Last Updated: 10/30/2025
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Walkthrough Link
 
-## Expanding the ESLint configuration
+[WIP]
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Description
+
+This is a personality quiz with a narrative twist: instead of revealing something about the user, the results uncover the story of a fallen adventurer they're assigned to. Inspired by choose-your-own-adventure books, the quiz places the user in the final moments of a character who's losing their battle against the final boss. As the journey unfolds, the user will relive memories, reflect on their past, and experience final thoughts of a character on their deathbed. 
+
+## Project Development 
+
+This was my first personal project using React, built from the ground up with Vite. After studying the React documentation, I wanted a project that would help me get hands-on experience with state management and conditional rendering. A quiz format was the perfect playground for that.
+
+As a Dungeons and Dragons fan and the fantasy genre, I wanted to explore death not as a game mechanic, but a narrative moment. The play style of a lot of tabletop role-playing games doesn't allow for deaths to happen with much emotional weight. The project allowed me to explore what these final moments might look like, and give some depth to the experience. 
+
+## Dependencies 
+- React + Vite
+- React-dom
+- react-router-dom
+
+## Plans for Future Development 
+- Add a starting screen
+- Create mobile compatability
+- Dark/Light Mode
+- Effects with Three.js
